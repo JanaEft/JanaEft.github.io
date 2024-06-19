@@ -1,0 +1,149 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background: radial-gradient(circle, #4b6cb7, #182848);
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    display: flex;
+    align-items: stretch;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.image-container:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.read-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.image-container:hover .read-more {
+    display: block;
+}
+
+.text {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section {
+    display: flex;
+    align-items: center;
+}
+
+.section.reversed {
+    flex-direction: row-reverse;
+}
+
+.text {
+    width: 50%;
+    padding: 20px;
+}
+
+.image-container {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container.with-overlay {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+    display: block;
+}
+
+.image-container:hover .overlay:hover {
+    opacity: 1;
+}
